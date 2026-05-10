@@ -7,5 +7,6 @@ spring:
       server:
         git:
           uri: https://github.com/trung1609/pharmacy-service-config.git
+          default-label: main
 server:
   port: 8888

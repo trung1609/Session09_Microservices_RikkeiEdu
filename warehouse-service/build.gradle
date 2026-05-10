@@ -6,7 +6,7 @@ plugins {
 
 group = 'com.trung'
 version = '0.0.1-SNAPSHOT'
-description = 'pharmacy-service'
+description = 'warehouse-service'
 
 java {
     toolchain {
@@ -27,8 +27,6 @@ dependencies {
     implementation 'org.springframework.boot:spring-boot-starter-webmvc'
     implementation 'org.springframework.cloud:spring-cloud-starter-config'
     implementation 'org.springframework.boot:spring-boot-starter-actuator'
-    implementation 'org.springframework.cloud:spring-cloud-starter-openfeign'
-    implementation 'org.springframework.cloud:spring-cloud-starter-circuitbreaker-resilience4j'
     compileOnly 'org.projectlombok:lombok'
     runtimeOnly 'org.postgresql:postgresql'
     annotationProcessor 'org.projectlombok:lombok'

@@ -1,0 +1,17 @@
+package com.trung.pharmacyservice.controller;
+
+import com.trung.pharmacyservice.service.PharmacyService;
+import lombok.RequiredArgsConstructor;
+import org.springframework.web.bind.annotation.*;
+
+@RestController
+@RequestMapping("/api/v1/pharmacies")
+@RequiredArgsConstructor
+public class PharmacyController {
+    private final PharmacyService pharmacyService;
+
+    @PostMapping("/process-order")
+    public String processOrder(@RequestParam Long productId) {
+        return pharmacyService.processOrder(productId);
+    }
+}
