@@ -1,0 +1,11 @@
+spring:
+  application:
+    name: config-server
+
+  cloud:
+    config:
+      server:
+        git:
+          uri: https://github.com/trung1609/pharmacy-service-config.git
+server:
+  port: 8888
