@@ -4,6 +4,8 @@ import com.trung.pharmacyservice.service.PharmacyService;
 import lombok.RequiredArgsConstructor;
 import org.springframework.web.bind.annotation.*;
 
+import java.util.concurrent.CompletableFuture;
+
 @RestController
 @RequestMapping("/api/v1/pharmacies")
 @RequiredArgsConstructor
@@ -18,5 +20,10 @@ public class PharmacyController {
     @PostMapping("/create-invoice")
     public String createInvoice(){
         return pharmacyService.createInvoice();
+    }
+
+    @GetMapping("/validate-insurance")
+    public CompletableFuture<String> validateInsurance(){
+        return pharmacyService.validateInsurance();
     }
 }
