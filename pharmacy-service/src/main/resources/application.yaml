@@ -3,5 +3,3 @@ spring:
     name: pharmacy-service
   config:
     import: configserver:http://localhost:8888/
-
-

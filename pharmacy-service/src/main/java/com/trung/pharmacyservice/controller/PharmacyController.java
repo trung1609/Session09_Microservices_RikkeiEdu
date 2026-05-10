@@ -14,4 +14,9 @@ public class PharmacyController {
     public String processOrder(@RequestParam Long productId) {
         return pharmacyService.processOrder(productId);
     }
+
+    @PostMapping("/create-invoice")
+    public String createInvoice(){
+        return pharmacyService.createInvoice();
+    }
 }
